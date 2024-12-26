@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a bio right now!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Estilo para el enlace */
+        .links a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 10px;
+            font-size: 20px; /* Aseguramos que ambos iconos tengan el mismo tamaño */
+        }
+
+        /* Aseguramos que el icono y el texto estén alineados */
+        .item-wrap {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        /* Alineamos el texto con un espacio de separación */
+        .item-wrap span {
+            margin-left: 10px;
+        }
+
+        /* Estilos para los iconos */
+        .discord-icon {
+            color: #7289da; /* Color de Discord */
+        }
+
+        .twitter-icon {
+            color: #1DA1F2; /* Color de Twitter */
+        }
+
+        .example-icon {
+            color: #5dfba9; /* Color de Example */
+        }
+
+        /* Estilo para el texto "Get UrBio" y el icono de verificación */
+        .hero span {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Estilo del tooltip */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 160px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 3px;
+            font-size: 12px; /* Reducimos el tamaño del texto aquí */
+            position: absolute;
+            z-index: 1;
+            bottom: 110%; /* Muestra el tooltip un poco más abajo (antes estaba a 125%) */
+            left: 50%;
+            margin-left: -80px; /* Centrado */
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="img">
+            <img src="urbio.jpg" alt="">
+        </div>
+        <span>
+            Get UrBio
+            <div class="tooltip">
+                <i class="fa-solid fa-check-circle" style="color: #3f9aea; font-size: 20px; vertical-align: middle;"></i>
+                <!-- Tooltip -->
+                <div class="tooltip-text">This account is verified</div>
+            </div>
+        </span>
+        <span>
+            Get your bio right now!
+        </span>
+    </div>
+
+    <div class="links">
+        <!-- Enlace de Twitter -->
+        <a href="https://x.com/urbiolol" class="item">
+            <div class="item-wrap">
+                <i class="fab fa-twitter twitter-icon"></i> <!-- Icono de Twitter -->
+                <span>Our Twitter</span>
+            </div>
+        </a>
+
+        <!-- Enlace de Discord -->
+        <a href="https://discord.gg/vKCM6q6Auz" class="item">
+            <div class="item-wrap">
+                <i class="fab fa-discord discord-icon"></i> <!-- Icono de Discord -->
+                <span>Join Discord</span>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
